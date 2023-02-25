@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter,Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --white: #ffffff;
+    --dark: #000000;
+    --red: #3B0000;
+    --border: #8c8c8c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    min-height: calc(100vh - 70px);
+
+}
+
+.section-title {
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+.sec-padding {
+    padding: 80px 0;
+}
+
+.main {
+    width: 100%;
+
+}
+
+.container {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-home {
+    display: flex;
+}
+
+
+/* Button */
+
+.btn {
+    line-height: 1.5;
+    background-color: var(--white);
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 30px;
+    color: var(--dark);
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 3px solid var(--border);
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    transition: all 0.5s;
+    
+}
+
+
+.btn::after {
+    display: block;
+    content: '';
+    width: 0%;
+    background-color: var(--dark);
+    transition: all 0.5s;
+    height: 3px;
+
+}
+
+.btn:hover::after {
+    width: 100%;
+    background-color: var(--dark);
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/* Button */
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+}
+
+/* Scrollbar */
+
+/* Home */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-section .home-text {
+    max-width: 100;
+    padding: 3rem;
+    margin: 6px 12px;
+    font-size: 60px;
+    align-self: center;
+}
+
+.home-section .home-text h1 strong {
+    display: block;
+    background-color: var(--red);
+    color: var(--white);
+
+}
+
+.home-section .home-text h1 b {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 0 5px;
+
+}
+
+.home-section .home-img {
+    width: 50%;
+}
+
+.home-section .home-img img {
+    width: 90%;
+}
+
+
+@media(max-width: 1224px){
+    .home-text h1{
+        font-size: 60px;
+    }
+
+    .portfolio-item{
+        min-width: calc(50% - 30px);
+    }
+
+}
+
+@media(max-width: 767px){
+    .contact-form,
+    .contact-info,
+    .about-img,
+    .about-text{
+        width: 100%;
+    }
+
+    .home-text h1{
+        font-size: 50px;
+    }
+
+    .about-text{
+        margin-top: 30px;
+    }
+
+    .portfolio-item{
+        width: calc(100% - 30px);
+    }
+
+
+    .contact-info{
+        order: -1;
+        margin-bottom: 15px;
+    }
+
+    .contact-info-item{
+        padding: 0;
+    }
+
+    .about-text .btn{
+        margin-bottom: 2rem;
+
+    }
+    .row-home{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width: 575px){
+
+    .home-text h1{
+        font-size: 35px;
+    }
+
+    .home-text h2{
+        font-size: 18px;
+    }
+
+    .section-title h2,
+    .header .nav-inner ul li a{
+        font-size: 35px;
+    }
+
+   
+    
+
+    @media(max-width: 427px){
+        .nav-item {
+            display: none;
+        }
+        .mobile-menu-icon {
+            display: block;
+        }
+        .mobile-menu-icon button {
+            background-color: var(--red);
+            border: none;
+            cursor: pointer;
+         
+        }
+        .mobile-menu ul {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .mobile-menu .nav-item {
+            display: block;
+            padding-top: 1.2rem;
+        }
+
+        .open {
+            display: block;
+        }
+
+    }
+
+   
+
+ 
+
+}

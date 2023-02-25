@@ -1,0 +1,49 @@
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 8px;
+}
+
+nav .img-user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 3px solid var(--red);
+  transition: all 0.5s;
+}
+
+nav .img-user img:hover {
+  transform: scale(0.9);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 26px;
+}
+
+nav ul li::after {
+  display: block;
+  content: "";
+  width: 0%;
+  background-color: var(--red);
+  transition: 0.5s;
+  height: 3px;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+  background-color: var(--red);
+}
+
+nav ul li a {
+  font-size: 21px;
+  text-decoration: none;
+  color: var(--red);
+}
